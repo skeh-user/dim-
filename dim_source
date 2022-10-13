@@ -1,0 +1,23 @@
+#!/usr/bin/python3
+
+import os
+import subprocess
+
+path = os.getcwd()
+files = []
+
+for f in os.listdir(path):	
+	if os.path.isfile(os.path.join(path,f)):
+		files.append(f)
+
+for i in range (len(files)):
+	print(f'[{i}]:', files[i])
+
+
+inf = int(input(": "))
+filename = ()
+l = inf
+filename=(files[l])	 
+command=["vim",filename]
+subprocess.call(command)
+		
